@@ -1,0 +1,191 @@
+*{
+    padding: 1px;
+    margin: 1px;
+}
+
+body{
+    background: linear-gradient(#d3d3d3 5%, #ffffff 100%);
+}
+
+
+.header{
+    align-items: center;
+    background-color: yellow ;
+    padding-right: 20px;
+    border-radius: 0 0 10px 10px;
+    max-width: 100%;
+}
+
+main{
+    margin: 6% 10% 3% 10%;
+    min-width: 0;
+    min-height:55vh;
+}
+
+hr{
+    opacity:1;
+    color: red;
+    margin-bottom: 4%;
+    margin-top: 4%;
+}
+
+h3{
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+nav{
+    border-radius: 0 0 10px 10px;
+}
+
+footer{
+    background-color: yellow ;
+    border-radius: 10px 10px 0 0;
+    max-width: 100%;
+    margin-top: 86vh;
+}
+
+h1{
+    text-align: center;
+    margin: 3em auto 1em auto;
+}
+
+header div{
+    display: flex;
+    justify-content: space-between;
+}
+
+span img{
+    max-width: 80px;
+    max-height: 40px;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: larger;
+}
+
+footer div{
+    display:flex;
+    justify-content: center;
+}
+
+li>a{
+    color: black;
+    font-weight:600; 
+    text-transform: uppercase;
+}
+
+.navbar-nav > li > .dropdown-menu { 
+    background: linear-gradient(#d3d3d3 5%, #ffffff 100%); 
+}
+
+input[type="search"]{
+    outline: black !important;
+}
+
+.nav-list{
+    list-style: none;
+}
+
+.nav-list-items{
+    flex: 1;
+    display: inline-block;
+    padding: 12px 12px;
+    text-align: right;
+    transition: 0.5s;
+}
+
+.helper{
+    display:none;
+}
+
+.nav-list-items:hover::after{
+    width: 100%;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.custom{
+    border: 1px solid black;
+
+}
+
+.display-flex{
+    display: flex;
+    gap: 1em;
+}
+
+.jednako{
+    justify-content: space-evenly;
+}
+
+.center{
+    justify-content: center;
+}
+
+.crna{
+    background-color: black;
+}
+
+.zuta {
+    background-color: yellow;
+}
+
+.slika{
+    max-width: 40em;
+    max-height: 25em;
+    min-width: 20em;
+
+}
+
+.justify{
+    text-align: justify;
+}
+
+.border-radius{
+    border-radius: 7%;
+}
+
+.kartica{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
+.card-img-top{
+    max-height: 10em;
+}
+
+.max-width{
+    max-width: 100px;
+}
+
+.card-custom {
+    margin:0 auto;
+  }
+
+.formp{
+    display: none;
+    font-size: smaller;
+    color: red;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+
+
