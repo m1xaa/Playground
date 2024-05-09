@@ -1,0 +1,85 @@
+
+/* Definišemo osnovne stilove */
+.container {
+    padding: 20px; /* Dodajemo malo unutrašnjeg prostora */
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;  
+    gap: 15px;               
+    padding: 10px;           
+  }
+  
+  .col-lg-4,
+  .col-md-6,
+  .col-sm-12 {
+    flex-basis: 33.33%; /* Fleksibilnost za velike ekrane */
+    box-sizing: border-box; /* Obezbeđuje pravilan račun širine */
+    border: #333;
+  }
+  
+  .card {
+    border: 1px solid #333;        
+    border-radius: 8px;           
+    background-color: white;       
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    padding: 20px;                 
+    margin-bottom: 15px;           
+    transition: box-shadow 0.3s;   
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);  
+  }
+  
+  .btn {
+    margin-top: 10px;             
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 14px;
+  }
+  
+  .card-body {
+    text-align: center;           
+  }
+  
+  
+  
+  .card-custom {
+    border: 1px solid #333; /* Dodaje blagi okvir */
+    border-radius: 8px; /* Zaobljeni uglovi */
+    background-color: white; /* Pozadinska boja */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Blaga senka */
+    transition: box-shadow 0.3s; /* Glatka tranzicija za efekat hovera */
+    cursor: pointer; /* Menja kursor na ruku pri hoveru */
+  }
+  
+  .card-custom:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3); /* Veća senka pri hoveru */
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .card-body {
+    padding: 20px; /* Dodaje unutrašnji prostor */
+    text-align: center; /* Centriranje teksta */
+  }
+  
+  .btn-dark {
+    background-color: #333; /* Tamnija boja dugmeta */
+    color: white; /* Belu boju teksta */
+  }
+  
+  .btn-dark:hover {
+    background-color: #555; /* Svetlija boja pri hoveru */
+  }

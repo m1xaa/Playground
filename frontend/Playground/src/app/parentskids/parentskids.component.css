@@ -1,0 +1,46 @@
+h1 {
+    margin: 35px;
+    margin-bottom: 70px;
+    font-weight: 200;
+  }
+  
+  .textbox {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    width: 200px; /* Ograničava širinu tekstualnog polja */
+  }
+  
+  .object-list {
+    margin: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatski raspored u kolone, minimalna širina 200px */
+    gap: 10px; /* Razmak između objekata */
+    margin-bottom: 20px; /* Razmak između objekata i dugmadi */
+  }
+  
+  .object-item {
+    background-color: #f1f1f1; /* Svetlo siva */
+    border: 1px solid #ccc; /* Granica */
+    border-radius: 5px;
+    padding: 20px; /* Veći padding za izgled kvadrata */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .log-button-container {
+    display: flex;
+    justify-content: center;  /* Center along the vertical axis */
+    align-items: center;      /* Center along the horizontal axis */
+    flex-direction: row;   /* Vertical stacking of elements */
+  }
+  
+  .log-button {
+    padding: 10px;
+    margin: 10px;  /* Margin between buttons to avoid overlapping */
+    font-size: 16px;
+    text-align: center;
+  }
+  

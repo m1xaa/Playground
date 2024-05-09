@@ -14,4 +14,6 @@ export class TaskService {
       new Task("bicikl", "nauci da vozis bicikl")
     ];
    }
+
+   getTasks() {return this.tasks;}
 }

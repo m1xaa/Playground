@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { KidsService } from './kids.service';
 import { ParentsService } from './parents.service';
-import { Parent } from './objects/parent';
 import { Person } from './objects/person';
 import { Kid } from './objects/kid';
 
@@ -42,7 +41,7 @@ export class LoginServiceService {
     if (person instanceof Kid) {
       this.router.navigate(['/']);
     } else {
-      this.router.navigate(['/parentskids']);
+      this.router.navigate(['/parentskids'], {state: {"person": person}});
     }
   }
 }

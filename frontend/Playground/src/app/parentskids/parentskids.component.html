@@ -1,1 +1,19 @@
-<p>parentskids works!</p>
+
+
+<main>
+    <h1>{{parent.name}}  {{parent.surname}}</h1>
+    
+    <!-- Lista sa objektima koji izgledaju kao kvadrati -->
+    <div class="object-list">
+      <a >
+        <div class="object-item" (click)="goToKid(kid)" *ngFor="let kid of kids">{{ kid.name }} {{ kid.surname }}</div>
+      </a>
+    </div>
+    
+    <!-- Dugmad za akcije -->
+    <div class="log-button-container">
+      <button  class="log-button">Dodaj dete</button>
+        <button class="log-button">Izmeni nalog</button>
+    </div>
+    
+</main>

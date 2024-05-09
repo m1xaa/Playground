@@ -1,0 +1,16 @@
+<main>
+        <h1>Tasks</h1>
+        <div id="parent" class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let task of tasks">
+            <div class="card" role="button">
+              <div class="card-body">
+                <h5 class="card-title">{{ task.title }}</h5>
+                <p class="card-text">{{ task.description }}</p>
+                <!-- Dodajemo gumb unutar kartice -->
+                <button class="btn log-button">Start task</button> <!-- Stavi odgovarajuću klasu za izgled gumba -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+</main>
