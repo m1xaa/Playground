@@ -1,0 +1,23 @@
+.centered-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;   /* Center vertically */
+}
+
+/* Ensure the image takes 50% of the container's height */
+.centered-image {
+    max-height: 50vh; /* Ensure image is at most 50% of viewport height */
+    max-width: 50vw;  /* Ensure image is at most 50% of viewport width */
+    width: auto;      /* Keep the aspect ratio */
+    height: auto;     /* Keep the aspect ratio */
+}
+
+.homepage-p {
+    display:flex; 
+    justify-content: center; 
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;  
+    margin-top: 10vh;
+    font-weight: bold;
+    font-size: larger; 
+}

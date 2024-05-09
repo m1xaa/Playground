@@ -5,23 +5,34 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-      </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+        <input class="form-control mx-5" type="search" placeholder="" aria-label="Search">
       </form>
+      <ul class="navbar-nav ms-auto">
+        <ng-container *ngIf="!userLoggedIn; then login; else logout"></ng-container>
+        <ng-template #login>
+          <li class="nav-item active">
+            <a (click)="LogIn()" class="nav-link active"><button class="btn btn-outline-dark">Log In</button></a>
+          </li>
+        </ng-template>
+        
+        <ng-template #logout>
+          <li class="nav-item active">
+            <a (click)="LogOut()" class="nav-link active"><button class="btn btn-outline-dark">Log Out</button></a>
+          </li>
+        </ng-template>
+      </ul>      
     </div>
   </div>
 </nav>
 
 <router-outlet />
-
 <footer>
   <div>
     <ul class="nav-list">
-      <li class="nav-list-items"><img src="../../images/facebook.png" alt="Facebook"></li>
-      <li class="nav-list-items"><img src="../../images/twitter.png" alt="Twitter"></li>
-      <li class="nav-list-items"><img src="../../images/gplus.png" alt="Gplus"></li>
+      <li class="nav-list-items"><img src="../assets/images/facebook.png" alt="Facebook"></li>
+      <li class="nav-list-items"><img src="../assets/images/twitter.png" alt="Twitter"></li>
+      <li class="nav-list-items"><img src="../assets/images/gplus.png" alt="Gplus"></li>
     </ul>
   </div>
 </footer>

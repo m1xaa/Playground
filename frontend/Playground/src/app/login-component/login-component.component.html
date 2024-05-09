@@ -1,0 +1,27 @@
+<main>
+    <!-- Angular Component Template -->
+    <form [formGroup]="applyForm" (ngSubmit)="logIn()" class="login-form">
+        <div class="form-container">
+            <h2>Log In</h2>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input id="username" type="text" formControlName="username" placeholder="Enter your username">
+                <p class="formp" *ngIf="applyForm.controls['username'].invalid && 
+                (applyForm.controls['username'].dirty || applyForm.controls['username'].touched)">Username can not be empty</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" formControlName="password" placeholder="Enter your password">
+                <p class="formp" *ngIf="applyForm.controls['password'].invalid && 
+                (applyForm.controls['password'].dirty || applyForm.controls['password'].touched)">Password can not be empty</p>
+            </div>
+            
+            <button type="submit">Log In</button>
+
+            <a (click)="register()"><p class="register-p"> You don't have an account? Register here</p></a>
+        </div>
+    </form>
+
+</main>
