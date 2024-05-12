@@ -4,17 +4,25 @@ import { KidsService } from './kids.service';
 import { ParentsService } from './parents.service';
 import { Person } from './objects/person';
 import { Kid } from './objects/kid';
+import { HttpserviceService } from './httpservice.service';
+import { User } from './objects/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginServiceService {
 
-  constructor(private router:Router, private kidsService: KidsService, private parentsService: ParentsService) { }
+  constructor(private router:Router, private kidsService: KidsService, private parentsService: ParentsService, private httpService: HttpserviceService) { }
 
   logIn(username: string, password: string) {
-    this.logInParent(username, password);
-    this.logInKid(username, password);
+    this.httpService.login(new User(username, password)).subscribe(
+      response => {
+        console.log('Success:', response);
+      },
+      error => {
+        console.error('Error:', error);
+      }
+    );
   }
 
   logInParent(username: string, password: string) {
