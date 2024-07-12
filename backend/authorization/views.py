@@ -7,7 +7,6 @@ from rest_framework import status
 from authorization.models import User
 from authorization.serializers import UserSerializer
 
-# Create your views here.
 
 @api_view(['POST'])
 def register(request):
@@ -30,5 +29,5 @@ def login(request):
     if not data['password'] == user.password:
         return Response({'error': 'Invalid password.'}, status=status.HTTP_400_BAD_REQUEST)
     
-    serializer = UserSerializer(user)  # Use instance parameter
+    serializer = UserSerializer(user)  
     return Response(serializer.data, status=status.HTTP_200_OK)
