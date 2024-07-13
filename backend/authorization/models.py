@@ -8,3 +8,4 @@ class User(models.Model):
     password = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
 
+
