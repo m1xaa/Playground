@@ -1,0 +1,14 @@
+
+<app-kids-display
+[kids]="kids"
+(update)="onUpdateClick($event)"
+(delete)="onDeleteClick($event)"
+(create)="onCreateClick()"
+/>
+
+<app-create-kid-modal
+*ngIf="showCreateModal"
+(create)="onCreate($event)"
+(cancel)="onCancelCreate()"
+/>
+

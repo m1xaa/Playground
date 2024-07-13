@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #ede248;
+    --secondary-color: #e39d35;
+    --highlight-color: black;  
+    --font-family: 'Arial, sans-serif';
+    --font-size: 16px;
+}
+
+body {
+    background-color: var(--primary-color);
+    padding: 10vh 5vh; 
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+

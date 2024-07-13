@@ -1,0 +1,14 @@
+<app-header
+(openRegistration)="openRegistrationModal()"
+(openLogin)="openLoginModal()"
+/>
+<main>
+    <app-registration
+    *ngIf="showRegistrationModal"
+    (close)="closeRegistrationModal()"/>
+    <router-outlet/>
+    <app-login
+    *ngIf="showLoginModal"
+    (close)="closeLoginModal()"/>
+</main>
+<app-footer/>
