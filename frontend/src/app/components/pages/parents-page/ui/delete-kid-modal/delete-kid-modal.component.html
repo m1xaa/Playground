@@ -1,1 +1,10 @@
-<p>delete-kid-modal works!</p>
+<div class="modal-overlay">
+    <div class="modal-content">
+        <h2>Remove Kid</h2>
+        <p>Are you sure you want to remove kid "{{ kid.name }}"?</p>
+        <div class="button-container">
+            <button (click)="onCancel()">Cancel</button>
+            <button (click)="onDelete()">Delete</button>
+        </div>
+    </div>
+</div>

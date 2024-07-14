@@ -52,6 +52,7 @@ export class ParentsPageComponent {
   onDeleteClick(kid: Kid) {
     this.selectedKid = kid;
     this.showDeleteModal = true;
+    console.log(this.selectedKid);
   }
 
   onCreateClick() {
@@ -69,5 +70,17 @@ export class ParentsPageComponent {
 
   onCancelCreate() {
     this.showCreateModal = false;
+  }
+
+  onDelete() {
+    this.kidService.delete(this.getCurrentParentId(), this.selectedKid.id).subscribe((response) => {
+      const index = this.kids.findIndex(k => k.id === this.selectedKid.id);
+      this.kids.splice(index, 1);
+    });
+    this.showDeleteModal = false
+  }
+
+  onCancelDelete() {
+    this.showDeleteModal=false
   }
 }

@@ -15,13 +15,10 @@ class KidSerializer(serializers.ModelSerializer):
 
     
     def update(self, instance, validated_data):
-        parent_id = validated_data.pop('parentId')
-        parent = User.objects.get(id=parent_id)
         instance.name = validated_data.get('name', instance.name)
         instance.description = validated_data.get('description', instance.description)
         instance.image = validated_data.get('image', instance.image)
         instance.age = validated_data.get('age', instance.age)
         instance.birthdate = validated_data.get('birthdate', instance.birthdate)
-        instance.parent = parent
         instance.save()
         return instance

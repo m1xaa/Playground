@@ -12,3 +12,10 @@
 (cancel)="onCancelCreate()"
 />
 
+<app-delete-kid-modal
+[kid]="selectedKid"
+*ngIf="showDeleteModal"
+(delete)="onDelete()"
+(cancel)="onCancelDelete()"
+/>
+

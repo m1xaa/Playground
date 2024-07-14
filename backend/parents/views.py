@@ -31,8 +31,8 @@ def update(request, parentId, kidId):
         kid = Kid.objects.get(id=kidId, parent_id=parentId)
     except Kid.DoesNotExist:
         return Response({'error': 'Kid not found'}, status=status.HTTP_404_NOT_FOUND)
-
-    serializer = KidSerializer(kid, data=request.data, partial=True)
+    request.data['parent'] = str(parentId)
+    serializer = KidSerializer(kid, data=request.data)
     if serializer.is_valid():
         serializer.save() 
         return Response(serializer.data, status=status.HTTP_200_OK)
