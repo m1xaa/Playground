@@ -19,3 +19,10 @@
 (cancel)="onCancelDelete()"
 />
 
+<app-update-kid-modal
+[kid]="selectedKid"
+*ngIf="showUpdateModal"
+(update)="onUpdate($event)"
+(cancel)="onCancelUpdate()"
+/>
+
