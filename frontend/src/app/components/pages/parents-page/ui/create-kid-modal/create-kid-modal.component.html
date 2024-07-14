@@ -1,0 +1,22 @@
+<div class="modal-overlay">
+    <div class="modal-content">
+        <h2>Login</h2>  
+        <form [formGroup]="createKidForm">
+            <label for="name">Name</label>
+            <input type="text" formControlName="name" id="name"/>
+            <label for="image">Image</label>
+            <input type="text" formControlName="image" id="image"/>
+            <label for="description">Description</label>
+            <textarea type="text" formControlName="description" id="description"></textarea>
+            <label for="age">Age</label>
+            <input type="number" formControlName="age" id="age"/>
+            <label for="birthdate">Birthdate</label>
+            <input type="date" formControlName="birthdate" id="birthdate"/>
+            <div class="button-container">
+                <button (click)="createKid()">Create</button>
+                <button (click)="closeModal()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+

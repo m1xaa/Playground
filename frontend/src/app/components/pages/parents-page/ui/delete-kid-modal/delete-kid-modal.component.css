@@ -1,0 +1,43 @@
+h2, p{
+    color: var(--primary-color);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    border: 1px solid black;
+    padding: 2em;
+    height: auto;
+    width: auto;
+    border-radius: 8%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-top: 10%;
+}
+
+button {
+    border-radius: 8%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
