@@ -19,7 +19,7 @@ export class AuthStateService {
       next: (response) => {
         const user = response
         this.storeCurrentUser(user);
-        this.router.navigate(['parent']);
+        this.router.navigate(['parent/']);
       },
       error: (error) => {
         this.handleError(error);
@@ -33,7 +33,7 @@ export class AuthStateService {
       next: (response) => {
         const user = response
         this.storeCurrentUser(user);
-        this.router.navigate(['parent']);
+        this.router.navigate(['parent/']);
       },
       error: (error) => {
         this.handleError(error);

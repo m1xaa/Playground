@@ -1,14 +1,16 @@
 from rest_framework import serializers
 
 from authorization.models import User
+from tasks.serializers import TaskSerializer
 from parents.models import Kid
 
 
 class KidSerializer(serializers.ModelSerializer):
+    tasks = TaskSerializer(many=True, read_only=True)
     parent = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     class Meta:
         model = Kid
-        fields = ['id', 'name', 'description', 'image', 'age', 'birthdate', 'parent']
+        fields = ['id', 'name', 'description', 'image', 'age', 'birthdate', 'parent', 'tasks']
 
     def create(self, validated_data):
         return Kid.objects.create(**validated_data)
