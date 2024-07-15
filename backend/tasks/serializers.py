@@ -6,10 +6,10 @@ from parents.models import Kid
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    kid = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
+    kid = serializers.PrimaryKeyRelatedField(queryset=Kid.objects.all())
     class Meta:
         model = Task
         fields = ['id', 'title', 'category', 'description', 'kid']
 
     def create(self, validated_data):
-        return Kid.objects.create(**validated_data)
+        return Task.objects.create(**validated_data)

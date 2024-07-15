@@ -9,6 +9,7 @@ from tasks.models import Task
 from tasks.serializers import TaskSerializer
 from parents.models import Kid
 from parents.serializers import KidSerializer
+from .llama import get_response
 
 class ListCreateView(APIView):
     def get(self, request, kidId):
@@ -18,8 +19,10 @@ class ListCreateView(APIView):
         return Response(serializer.data)
 
     def post(self, request, kidId):
-        request.data['kid'] = str(kidId)
-        serializer = TaskSerializer(data=request.data)
+        kid = get_object_or_404(Kid, id=kidId)
+        task = get_response(kid.description)
+        task['kid'] = str(kidId)
+        serializer = TaskSerializer(data=task)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)

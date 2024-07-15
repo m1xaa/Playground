@@ -25,6 +25,7 @@ export class TasksPageComponent {
   getKid() {
     if (history.state && history.state.kid) {
       this.kid = history.state.kid;
+      console.log(this.kid);
     }
   }
 
