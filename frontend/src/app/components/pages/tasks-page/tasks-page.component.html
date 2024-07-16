@@ -12,7 +12,7 @@
             <td class="color">{{task.title}}</td>
             <td class="color">{{task.category}}</td>
             <td class="color">{{task.description}}</td>
-            <td></td>
+            <td class="color" (click)="openDeleteModal(task)"><img src="../../../../assets/plusic.jpeg.png" alt=""></td>
         </tr>
         <tr>
             <td class="color"></td>
@@ -22,3 +22,10 @@
         </tr>
     </tbody>
 </table>
+
+<app-delete-tasks-modal
+*ngIf="showDeleteModal"
+[task]="selectedTask"
+(delete)="onDelete()"
+(cancel)="onCancel()"
+/>

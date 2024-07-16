@@ -19,4 +19,8 @@ export class TaskService {
   create(kidId: string): Observable<Task> {
     return this.http.post<Task>(`${this.baseUrl}/${kidId}/tasks/`, {});
   }
+
+  delete(kidId: string, taskId: string): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}/${kidId}/tasks/${taskId}`);
+  }
 }
