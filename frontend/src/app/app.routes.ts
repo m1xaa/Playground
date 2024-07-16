@@ -5,10 +5,12 @@ import { LoginComponent } from './components/pages/authorization/login/login.com
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { ParentsPageComponent } from './components/pages/parents-page/parents-page.component';
 import { CuteGiraffeComponent } from './components/pages/cute-giraffe/cute-giraffe.component';
+import { TasksPageComponent } from './components/pages/tasks-page/tasks-page.component';
 
 export const routes: Routes = [
+    {path: '', component: CuteGiraffeComponent},
     {path: 'register/', component: RegistrationComponent},
     {path: 'login/', component: LoginComponent}, 
     {path:'parent', component: ParentsPageComponent},
-    {path: '', component: CuteGiraffeComponent}
+    {path: 'tasks', component: TasksPageComponent}
 ];

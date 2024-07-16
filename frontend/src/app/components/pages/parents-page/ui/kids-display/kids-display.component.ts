@@ -19,6 +19,7 @@ export class KidsDisplayComponent {
   @Output() update = new EventEmitter<Kid>();
   @Output() delete = new EventEmitter<Kid>();
   @Output() create = new EventEmitter<void>();
+  @Output() visit = new EventEmitter<Kid>();
 
   onUpdate(kid: Kid) {
     this.update.emit(kid);
@@ -30,5 +31,9 @@ export class KidsDisplayComponent {
 
   onCreate() {
     this.create.emit();
+  }
+
+  onVisit(kid: Kid) {
+    this.visit.emit(kid);
   }
 }

@@ -1,0 +1,31 @@
+<table class="tasks-table">
+    <thead>
+        <tr>
+            <th class="color">TITLE</th>
+            <th class="color">CATEGORY</th>
+            <th class="color">DESCRIPTION</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td class="color">{{task.title}}</td>
+            <td class="color">{{task.category}}</td>
+            <td class="color">{{task.description}}</td>
+            <td class="color" (click)="openDeleteModal(task)"><img src="../../../../assets/plusic.jpeg.png" alt=""></td>
+        </tr>
+        <tr>
+            <td class="color"></td>
+            <td class="color"></td>
+            <td class="color"></td>
+            <td class="color" (click)="addTask()"><img src="../../../../assets/plusic.jpeg.png" alt=""></td>
+        </tr>
+    </tbody>
+</table>
+
+<app-delete-tasks-modal
+*ngIf="showDeleteModal"
+[task]="selectedTask"
+(delete)="onDelete()"
+(cancel)="onCancel()"
+/>

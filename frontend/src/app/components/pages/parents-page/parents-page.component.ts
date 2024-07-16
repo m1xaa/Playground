@@ -8,6 +8,8 @@ import { Kid } from '../../../models/as-is/kid';
 import { KidService } from '../../../service/kid.service';
 import { User } from '../../../models/as-is/user';
 import { CreateKidRequest } from '../../../models/kid/create-kid-request';
+import { UpdateKidRequest } from '../../../models/kid/update-kid-request';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-parents-page',
@@ -31,7 +33,7 @@ export class ParentsPageComponent {
   kids: Kid[] = [];
   selectedKid!: Kid;
 
-  constructor(private kidService: KidService) {
+  constructor(private kidService: KidService, private router: Router) {
     this.kidService.getAll(this.getCurrentParentId()).subscribe((response) => {
       if (response) {
         this.kids = response;
@@ -83,4 +85,22 @@ export class ParentsPageComponent {
   onCancelDelete() {
     this.showDeleteModal=false
   }
+
+  onCancelUpdate() {
+    this.showUpdateModal = false;
+  }
+
+  onUpdate(updateKidRequest: UpdateKidRequest) {
+    this.kidService.update(this.getCurrentParentId(), updateKidRequest, this.selectedKid.id).subscribe((response) => {
+      if (response) {
+        const index = this.kids.findIndex(k => k.id === this.selectedKid.id);
+        this.kids[index] = response;
+      }
+    });
+    this.showUpdateModal = false;
+  }
+
+  onVisitClick(kid: Kid) {
+    this.router.navigate(['tasks/'], {state: {kid: kid}})
+  } 
 }

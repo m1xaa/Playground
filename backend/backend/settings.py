@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'playground',
     'authorization',
     'parents',
+    'tasks',
     'corsheaders',
 ]
 

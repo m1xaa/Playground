@@ -1,7 +1,7 @@
 <div class="cards-container">
     <div *ngFor="let kid of kids" class="card">
       <img [src]="kid.image" alt="Kid Image" class="card-img">
-      <div class="card-body">
+      <div class="card-body" (click)="onVisit(kid)">
         <h5 class="card-title">{{ kid.name }}</h5>
         <p>{{ kid.age }}</p>
       </div>

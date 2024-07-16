@@ -1,3 +1,5 @@
+import { Task } from "./task";
+
 export interface Kid {
     id: string;
     name: string;
@@ -5,4 +7,5 @@ export interface Kid {
     age: number;
     image: string;
     birthdate: Date;
+    tasks: Task[];
 }

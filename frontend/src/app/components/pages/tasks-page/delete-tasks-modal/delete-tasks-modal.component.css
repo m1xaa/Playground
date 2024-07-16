@@ -1,31 +1,5 @@
-label {
-    display: block;
+h2, p{
     color: var(--primary-color);
-}
-
-h2{
-    color: var(--primary-color);
-}
-
-input {
-    display: block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10%;
-}
-
-textarea {
-    display: block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10%;
-    height: 10vh;
 }
 
 .modal-overlay {
@@ -67,6 +41,3 @@ button:hover {
     transform: scale(1.1);
 }
 
-.alert {
-    color: red;
-}

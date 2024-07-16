@@ -3,6 +3,7 @@
 [kids]="kids"
 (update)="onUpdateClick($event)"
 (delete)="onDeleteClick($event)"
+(visit)="onVisitClick($event)"
 (create)="onCreateClick()"
 />
 
@@ -17,5 +18,12 @@
 *ngIf="showDeleteModal"
 (delete)="onDelete()"
 (cancel)="onCancelDelete()"
+/>
+
+<app-update-kid-modal
+[kid]="selectedKid"
+*ngIf="showUpdateModal"
+(update)="onUpdate($event)"
+(cancel)="onCancelUpdate()"
 />
 
