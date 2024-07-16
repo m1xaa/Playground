@@ -1,26 +1,25 @@
+# Key-value engine
 
-Playground
 Playground is a simple yet effective application developed during the EESTEC LC AI Hackathon. It leverages the Llama 70B model to generate creative tasks for young kids, fostering creativity and learning through engaging activities.
 
-Prerequisites
+## Getting Started
+
+### Prerequisites
+
 To run this application, ensure you have the following installed on your machine:
-Angular
-Django
 
-Installation and Running
-Follow the steps below to set up and run the application:
-
-Backend
-Navigate to the backend folder and start the Django server:
+* Angular
+* Django
 
 
-cd backend
-python manage.py runserver
-Frontend
-Navigate to the frontend folder and start the Angular server:
+### Running the Project
+
+*Follow the steps below to set up and run the application:
+
+*Backend
+Navigate to the backend folder and start the Django server: python manage.py runserver
+
+*Frontend
+Navigate to the frontend folder and start the Angular server: ng serve
 
 
-cd frontend
-ng serve
-Summary
-Playground brings innovative AI-powered creativity to children's learning experiences. With just a few setup steps, you can have a robust platform ready to inspire young minds.
