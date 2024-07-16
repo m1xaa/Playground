@@ -14,12 +14,20 @@ To run this application, ensure you have the following installed on your machine
 
 ### Running the Project
 
-*Follow the steps below to set up and run the application:
+* Follow the steps below to set up and run the application:
 
-*Backend
-Navigate to the backend folder and start the Django server: python manage.py runserver
+* Backend
+Navigate to the backend folder and start the Django server:
+```
+cd backend
+python manage.py runserver
+```
 
-*Frontend
-Navigate to the frontend folder and start the Angular server: ng serve
+* Frontend
+Navigate to the frontend folder and start the Angular server:
+```
+cd frontend
+ng serve
+```
 
 
