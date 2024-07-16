@@ -27,3 +27,14 @@ class ListCreateView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class DeleteListView(APIView):
+    def delete(self, request, kidId, taskId):
+        try:
+            kid = Kid.objects.get(id=kidId)
+            task = Task.objects.get(id=taskId)
+        except Kid.DoesNotExist or Task.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+        
+        task.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
